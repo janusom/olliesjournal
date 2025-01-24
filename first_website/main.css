@@ -1,0 +1,42 @@
+body {
+    background-color: lightgrey;
+    font-size: 25px;
+}
+/* color refers to the text color and not background */
+h1 {
+    font-size: 100px;
+    color: lightyellow;
+}
+h2, h3, h4, h5, h6 {
+    font-size: 30px;
+    color: hotpink;
+}
+
+p {
+    color: cornflowerblue;
+    background-color: lightyellow;
+    font-size: 40px;
+    border: 150px dashed hotpink;
+    padding: 50px;
+    text-align: center;
+}
+
+li {
+    color: darkorchid;
+}
+
+.special {
+    background-color: hotpink;
+    border: 150px dashed lightgreen;
+    padding: 50px;
+    color: lightgreen
+}
+
+.highlight {
+    background-color: yellow;
+    font-style: italic;
+}
+img {
+    max-width: 100%;
+    /* width: 100%; - this stretches beyond the images actual size. Max width fixes this, capping the max width size*/
+}
