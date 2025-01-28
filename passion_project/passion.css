@@ -1,0 +1,26 @@
+body {
+    background-image: url("notebookpaperbackground.jpg");
+    font-size: 20px;
+    font-family: monospace;
+}
+a{
+    color: blue;
+    font-size: 15px;
+    font-family: monospace;
+}
+
+h1{
+    color: crimson;
+}
+
+p{
+    color: blue;
+}
+
+li{
+    color: blue;
+}
+
+summary{
+    color: crimson;
+}
