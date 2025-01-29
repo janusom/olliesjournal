@@ -35,3 +35,17 @@ main{
 #id{
     background-color: lightslategray;
 }
+
+footer{
+    margin: 20px;
+    background-color: lightcoral;
+    padding: 10px;
+    text-align: center;
+    color: blueviolet;
+    font-family: monospace;
+    font-size: 20px;
+}
+
+footer{
+    background-color: lightcyan;
+}
