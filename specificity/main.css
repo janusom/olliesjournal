@@ -27,7 +27,7 @@ main{
     font-size: 20px;
 
 }
- /* classes are more specific than defaults, but less so than ids */
+ /* classes are more specific than defaults, but less so than ids, regardless of position in document */
 .class{
     background-color: lightsalmon;
 }
@@ -46,6 +46,7 @@ footer{
     font-size: 20px;
 }
 
+/* rules set down lower in a document take more relevance over other ones above them */
 footer{
     background-color: lightcyan;
 }
