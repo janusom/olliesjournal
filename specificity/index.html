@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Specificity</title>
+        <link rel="stylesheet" href="main.css">
+        <!-- embedded styles take priority over external ones -->
+        <!-- below <style> is embedded -->
+        <style>
+            div {
+                background: lightgreen
+            }
+        </style>
+    </head>
+    <!-- inline styles are the most specific -->
+    <body>
+        <a href="../index.html">Back to journal</a>
+        <div style= "background-color: blue";> application specificity</div>
+
+        <main class="class" id="id">Identifier Specificity</main>
+    </body>
+</html>

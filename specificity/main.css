@@ -1,0 +1,37 @@
+body{
+    background-color: bisque;
+}
+img{
+    max-width: 100%;
+}
+
+/* external styles are the least specific application */
+div{
+    margin: 20px;
+    background-color: rgb(240, 124, 240);
+    padding: 10px;
+    text-align: center;
+    color: aliceblue;
+    font-family: monospace;
+    font-size: 20px;
+}
+
+/* default tags are the least specific */
+main{
+    margin: 20px;
+    background-color: lightgray;
+    padding: 10px;
+    text-align: center;
+    color: blueviolet;
+    font-family: monospace;
+    font-size: 20px;
+
+}
+ /* classes are more specific than defaults, but less so than ids */
+.class{
+    background-color: lightsalmon;
+}
+
+#id{
+    background-color: lightslategray;
+}
