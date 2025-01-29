@@ -11,14 +11,17 @@ a{
 
 h1{
     color: crimson;
+    font-size: 55px;
+    font-weight: bolder;
+    font-family: "helvetica";
 }
 
 p{
-    color: blue;
+    color: rgb(21, 21, 158);
 }
 
 li{
-    color: blue;
+    color: rgb(21, 21, 158);;
 }
 
 summary{
