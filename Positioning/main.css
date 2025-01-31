@@ -1,0 +1,180 @@
+* {
+    box-sizing: border-box;
+}
+
+a{
+    margin:10px;
+}
+body{
+    background-color: lightsteelblue;
+}
+img{
+    max-width: 100%;
+}
+.block{
+    background:lightpink;
+    border: 1px solid;
+    padding:10px;
+    margin:10px;
+}
+
+/* padding should be avoided with inline elements, as the ignore vertical axis */
+.inline{
+    background: lightgreen;
+    border: 1px solid;
+    /* padding: 30px; */
+    /* margin: 30px; */
+    /* width: 100px; */
+    /* height: 100px */
+}
+
+.inline-block{
+    display: inline-block;
+    background: lightgreen;
+    border: 1px solid;
+    padding: 30px;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+}
+.container{
+    background: lightgoldenrodyellow;
+    border: 1px solid;
+    padding: 20px;
+    margin: 10px;
+}
+.content-box{
+    background: lightcyan;
+    padding: 50px;
+    border: 5px dashed blue;
+    margin: 50px;
+    width: 200px;
+    height: 200px;
+    box-sizing: content-box;
+}
+
+.border-box{
+    background: lightcyan;
+    padding: 50px;
+    border: 5px dashed blue;
+    margin: 50px;
+    width: 200px;
+    height: 200px;
+    box-sizing: border-box;
+}
+
+/* positioning commands work from the edge they reference, so down moves up, top moves down, right moves left, and left moves right (and the opposite happens when you write negative values */
+.smiley{
+    background: rgb(255, 255, 84);
+    border: 1px, solid, black;
+    padding: 10px;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: 20px;
+    left: 50px;
+}
+
+
+.left-triangle{
+    width: 0;
+    height: 0;
+    border-top-width: 40px;
+    border-top-style: solid;
+    border-top-color: transparent;
+    border-right-width: 40px;
+    border-right-style: solid;
+    border-right-color: black;
+    position: relative;
+    top: -12px;
+    left: -50px;
+}
+
+.right-triangle{
+    width: 0;
+    height: 0;
+    border-top-width: 40px;
+    border-top-style: solid;
+    border-top-color: transparent;
+    border-left-width: 40px;
+    border-left-style: solid;
+    border-left-color: black;
+    position: relative;
+    top: -50px;
+    left: 190px;
+}
+
+.half-circle{
+    width: 50px;
+    height: 25px;
+    background-color: black;
+    border-bottom-left-radius: 26px;
+    border-bottom-right-radius: 26px;
+    border: 5px solid;
+    position: absolute;
+    top: 65%;
+    left: 38%;
+}
+/* absolute positioning removes it fron the regular flow, which explains why this is overlapping over "smiley" */
+.right-blush{
+    background: red;
+    border: 1px solid;
+    width: 25px;
+    height: 25px;
+    /* in order for absolute position to work, it needs to be contained in a another position element */
+    position: absolute;
+    top: 50%;
+    right: 5%;
+}
+
+.left-blush{
+    background: red;
+    border: 1px solid;
+    width: 25px;
+    height: 25px;
+    /* in order for absolute position to work, it needs to be contained in a another position element */
+    position: absolute;
+    top: 50%;
+    left: 5%;
+}
+
+.left-eye{
+    background: black;
+    border: 1px solid;
+    width: 35px;
+    height: 35px;
+    /* in order for absolute position to work, it needs to be contained in a another position element */
+    position: absolute;
+    top: 25%;
+    left: 20%;
+}
+
+.right-eye{
+    background: black;
+    border: 1px solid;
+    width: 35px;
+    height: 35px;
+    /* in order for absolute position to work, it needs to be contained in a another position element */
+    position: absolute;
+    top: 25%;
+    right: 20%;
+}
+/* fixed elements only take as much space as they need to, and not the entire length of the screen */
+/* for fixed elements, they are position in relationship to the area of the screen, and not the edges of the original position, so command right renders right, and command left renders left*/
+.fixed{
+    background: lightseagreen;
+    border: 1px, solid;
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    right: 50%;
+}
+
+.sticky{
+    background: lightsalmon;
+    border: 1px solid;
+    padding: 20px;
+    position: sticky;
+    margin: 10px;
+    top: 0;
+}
