@@ -16,6 +16,10 @@
     position: sticky;
     top:0;
 }
+.inline-block{
+    display: inline-block;
+    background: rgba(249, 246, 212, 0.60);
+}
 body {
     background-image: url("notebook-page.png");
     background-size: 100%;
