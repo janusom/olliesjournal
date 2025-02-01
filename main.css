@@ -1,11 +1,9 @@
 body {
-    background-image: url(pixeled-gradient.gif);
-    background-repeat:repeat-y
-    background-position:center;
-    background-size:cover;
+    background-image: url("pixeled-gradient.gif");
+    background-size: 100%;
+    font-family: monospace;
     color: white;
     font-size: 25px;
-    font-family: monospace;
 }
 
 a {
