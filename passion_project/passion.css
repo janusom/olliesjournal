@@ -3,19 +3,35 @@
     src: url(Pervitina-Dex-FFP.ttf);
 }
 
+marquee{
+    color: blue;
+    font-size: 20px;
+    font-family: monospace;
+}
+span{
+    margin-right:500px;
+}
+
 .container{
     background: rgba(249, 246, 212, 0.60);
     margin-left: 180px;
     margin-right: 43px;
+    box-sizing: border-box;
 }
 .space{
     height: 5px;
 }
 .navigation{
-    background:rgb(249 246 212);
+    background:rgb(250 249 212);
     position: sticky;
     top:0;
 }
+
+.inline{
+    padding: 10px;
+    text-align: center;
+}
+
 .inline-block{
     display: inline-block;
     background: rgba(249, 246, 212, 0.60);
@@ -29,23 +45,26 @@ a{
     color: blue;
     font-size: 15px;
     font-family: monospace;
+    margin-right: 50px;
 }
 
 h1{
-    color: red;
+    margin: 0;
     margin-top: 10px;
-    font-size: 55px;
+    color: red;
+    font-size: 70px;
     font-family: Pervitina-Dex-FFP;
     text-shadow:
     /* Outline */
-    -1px -1px 0 #000000,
-    1px -1px 0 #000000,
-    -1px 1px 0 #000000,
-    1px 1px 0 #000000,  
-    -2px 0 0 #000000,
-    2px 0 0 #000000,
-    0 2px 0 #000000,
-    0 -2px 0 #000000;
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black,  
+    -2px 0 0 black,
+    2px 0 0 black,
+    0 2px 0 black,
+    0 -2px 0 black;
+    text-align: center;
 }
 
 p{

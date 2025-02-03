@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Who's Brollie?</title>
+        <link rel="stylesheet" href="passionV2.css">
+    </head>
+    <body>
+        <div class="navigation-panel">
+            <span class="date-time">
+                <p id="date"></p>
+                <p id="time"></p>
+                <!-- javascript -->
+                <script>
+                    function updateDateTime() {
+                    var now = new Date();
+                
+                    // Format date and time separately
+                    var date = now.toLocaleDateString();
+                    var time = now.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
+
+                
+                    // Insert into HTML
+                    document.getElementById("date").innerHTML = date;
+                    document.getElementById("time").innerHTML = time;
+                    }
+                
+                    updateDateTime(); // Run function initially
+                    setInterval(updateDateTime, 60000); // Update every second
+                </script>
+            </span>
+            <div class="nav-links">
+                <div class="link-box"><a href="entries.html">Splits</a></div>
+                <div class="link-box"><a href="entries.html">PRs</a></div>
+                <div class="link-box"><a href="entries.html">Entries</a></div>
+                <div class="link-box"><a href="entries.html">Recipes</a></div>
+            </div>
+            <div class="info-links">
+                <div class="link-box"><a href="index.html">Back to Home</a></div>
+                <div class="link-box"><a href="../index.html">Back to Journal</a></div>
+            </div>
+        </div>
+        <div class="title-box">
+                <h1>Brollie's Log</h1>
+        </div>
+        <div class="right-content-box">
+            <p>Hey there, my name is actually Ollie.<br><br> I am a girl who loves to lift!<br><br>I started weightlifting a year ago! Since then I have succesfully undergone body recomposition and one maingaining phase. All self-coached!</p>
+            <details>
+                <summary>This is me, before and after one year of Lifting </summary>
+                <div class="inline-block">
+                    <img src="before.png"alt="me in january 2024" width = "500">
+                    <img src="after.png"alt="me in january 2025" width = "500">
+                </div>
+                <p>there's only a 4lb difference betweent these two pictures! :O</p>
+            </details>
+            <p>If you'd like to follow along my journey, this is the place to be!</p>
+            <div class="fixed-marquee">
+                <marquee
+                truespeed
+                scrolldelay="50"
+                display="flex"
+                justify-conten="space-between">
+                    <span>Let's make some gains, bro.</span>
+                    <span>Eat those carbs.</span>
+                    <span>But hey, watch that sugar.</span>
+                    <span>All macros are important.</span> 
+                    <span>Also, please don't melt ice cream if you're on a bulk just to get more carbs.</span>  
+                    <span>Who are you, Sam Sulek?</span>
+                    <span>Oh, you wish.</span>
+                    <span>We all wish.</span>
+                    <span>I mean, I get it. Some people need tons of carbs.</span>
+                    <span>But it's not good for you. You gotta watch your cholesterol and your blood sugar</span>
+                    <span>...</span>
+                    <span>Are you reading this?</span>
+                    <span>Really?</span>
+                    <span>Hey, look at you.</span>
+                    <span>For that alone, you'll PR on your favorite compound lift next week.</span> 
+                    <span>Yep.</span>
+                    <span>I am great, I know.</span>
+                </marquee>
+            </div>
+        </div>
+    </body>
+</html>

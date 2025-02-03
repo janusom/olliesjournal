@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Brollie's Log</title>
+        <link rel="stylesheet" href="passionV2.css">
+    </head>
+    <body>
+        <div class="navigation-panel">
+            <span class="date-time">
+                <p id="date"></p>
+                <p id="time"></p>
+                <!-- javascript -->
+                <script>
+                    function updateDateTime() {
+                    var now = new Date();
+                
+                    // Format date and time separately
+                    var date = now.toLocaleDateString();
+                    var time = now.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
+
+                
+                    // Insert into HTML
+                    document.getElementById("date").innerHTML = date;
+                    document.getElementById("time").innerHTML = time;
+                    }
+                
+                    updateDateTime(); // Run function initially
+                    setInterval(updateDateTime, 60000); // Update every second
+                </script>
+            </span>
+            <div class="nav-links">
+                <div class="link-box"><a href="entries.html">Splits</a></div>
+                <div class="link-box"><a href="entries.html">PRs</a></div>
+                <div class="link-box"><a href="entries.html">Entries</a></div>
+                <div class="link-box"><a href="entries.html">Recipes</a></div>
+            </div>
+            <div class="info-links">
+                <div class="link-box"><a href="About.html">Who's Brollie?</a></div>
+                <div class="link-box"><a href="../index.html">Back to Journal</a></div>
+            </div>
+        </div>
+        <div class="title-box">
+                <h1>Brollie's Log</h1>
+        </div>
+        <div class="right-content-box">
+            <p>Welcome to my fitness log!<br>This is a hub for all of my training deets.</p> 
+            <div class="block"></div>
+            <details>
+                <summary>In here, I will share:</summary>
+                <ul>
+                    <li>My workout splits</li>
+                    <li>Achievements and PRs</li>
+                    <li>Training Strategies and Phases</li>
+                    <li>Details about my Nutrition and Recovery</li>
+                </ul>
+            </details>
+            <p>Full disclosure! I am not a pro! I am self-taught, and this is me figuring out what works for me! This is a personal log so, follow along at your own discretion!</p>
+            <details>
+                <summary>It's not so serious</summary>
+                <img class= "gif" src="Arnoldputcookiedown.gif" alt="putcookiedown"width="500" style="margin-left: 25%";>
+            </details>
+            <div class="fixed-marquee">
+                <marquee
+                truespeed
+                scrolldelay="50"
+                display="flex"
+                justify-conten="space-between">
+                    <span>Let's make some gains, bro.</span>
+                    <span>Eat those carbs.</span>
+                    <span>But hey, watch that sugar.</span>
+                    <span>All macros are important.</span> 
+                    <span>Also, please don't melt ice cream if you're on a bulk just to get more carbs.</span>  
+                    <span>Who are you, Sam Sulek?</span>
+                    <span>Oh, you wish.</span>
+                    <span>We all wish.</span>
+                    <span>I mean, I get it. Some people need tons of carbs.</span>
+                    <span>But it's not good for you. You gotta watch your cholesterol and your blood sugar</span>
+                    <span>...</span>
+                    <span>Are you reading this?</span>
+                    <span>Really?</span>
+                    <span>Hey, look at you.</span>
+                    <span>For that alone, you'll PR on your favorite compound lift next week.</span> 
+                    <span>Yep.</span>
+                    <span>I am great, I know.</span>
+                </marquee>
+            </div>
+        </div>
+    </body>
+</html>
