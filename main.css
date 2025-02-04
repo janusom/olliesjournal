@@ -6,8 +6,31 @@ body {
     font-family: monospace;
 }
 
+hr{
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid lightgreen;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.nav{
+    box-sizing: border-box;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    background: rgb(244, 76, 146, 0.5);
+}
+
+a:hover{
+    background-color: lightgreen;
+    color: green;
+}
+
 a {
-    color: lightgreen;
+    color: white;
+    text-decoration: none;
 }
 h1 {
     font-family: helvetica;
