@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: lightblue;
+}
+img{
+    max-width: 100%;
+}
+.container{
+    background: lightgoldenrodyellow;
+    border: 1px solid;
+    padding: 10px;
+    height: 600px;
+    display: flex;
+    /* flex-direction: column;makes it vertical */
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    justify-content: space-evenly;
+    /* align items is used for non-wrap so single line */
+    /* align-items: center; */
+    /* align content is used for wrap, so multiline */
+    /* align-content: space-around; */
+    gap: 15px;
+}
+
+.item{
+    padding: 10px;
+    background: lightpink;
+    border: 1px, solid;
+    width: 200px;
+}

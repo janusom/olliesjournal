@@ -1,0 +1,53 @@
+<style>
+  .popup-message {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);  /* White with transparency */
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    display: none;  /* Initially hidden */
+    z-index: 10;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+</style>
+<div class="main-container">
+  <div class="section">
+      <div class="subsection">
+          <div class="item" id="item1" onmouseover="changeColor()" onmouseout="resetColor()" onclick="showMessage(event)">Item 1</div>
+          <div class="item" id="item2" onmouseover="changeColor()" onmouseout="resetColor()" onclick="showMessage(event)">Item 2</div>
+          <!-- Add more items here -->
+      </div>
+  </div>
+</div>
+
+<div class="popup-message" id="popupMessage"></div>
+
+<script>
+function showMessage(event) {
+  // Get the message popup element
+  let popup = document.getElementById("popupMessage");
+
+  // Set the content of the popup
+  popup.textContent = "You clicked " + event.target.textContent;
+
+  // Get the position of the clicked item
+  let rect = event.target.getBoundingClientRect();
+
+  // Position the popup relative to the clicked item
+  popup.style.left = rect.left + "px";
+  popup.style.top = rect.top - 30 + "px";  // Position above the item
+  popup.style.display = "block";  // Make it visible
+}
+
+function hideMessage() {
+  let popup = document.getElementById("popupMessage");
+  popup.style.display = "none"; // Hide the popup when clicking elsewhere
+}
+
+document.body.addEventListener("click", function (event) {
+  if (!event.target.classList.contains("item")) {
+      hideMessage();
+  }
+});
+</script>
