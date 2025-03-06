@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div class="main-container" style="flex-direction:row; width: 100vw; justify-content: center;">
+            <div class="section" style = "flex-direction: column; overflow-y: hidden; height: 100%; width: 50%; border: 1px, black, solid; background-color: rgba(0, 0, 0, 0.255); align-items: center; justify-content: center;">
+                <div class="item" style = "flex: 1 1 calc(100%/1)">
+                    <a href="index.html"><img src="tile-without-bg.svg" alt="yellow-tile-design"></a>
+                </div>
+            </div>
+            <div class="section" style = "flex-direction: column; height: 100%; width: 50%; border: 1px, black, solid; background-color: rgba(0, 0, 0, 0.255); align-items: center; justify-content: center;">
+                <div class="item" style = "height: 25%; width: 100%; border: 1px, black, solid; padding: 50px; text-align: left;">
+                    <h1 style="border: none; background-color: none;">I told you... <br>
+                        There's always more.</h1>
+                </div>
+                <div class="item" style = "height: 25%; width: 100%; border: 1px, black, solid; padding: 50px; text-align: left;">
+                    <p style="border: none; background-color: none;">Thanks for visiting my site. Like I said, it's a pleasure to meet you.</p>
+                </div>
+                <div class="item" style = "height: 25%; width: 100%; border: 1px, black, solid; padding: 50px; text-align: left;">
+                    <p style="border: none; background-color: none;">I am currently working on compiling my most resent work...</p>
+                </div>
+                <div class="item" style = "height: 25%; width: 100%; border: 1px, black, solid; padding: 50px;text-align: left;">
+                    <p style="border: none; background-color: none; text-align: left;">But in the meantime...</p>
+                    <a href="http://www.janusom.myportfolio.com" style="text-decoration: underline;">Here's a link to my first year Graphic Design portfolio</a>
+                </div>
+
+            </div>
+        </div>
+        <script>
+            function getRandomColor() {
+              let letters = "0123456789ABCDEF";
+              let color = "#";
+              for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+              }
+              return color;
+            }
+          
+            function changeColor(event) {
+                event.target.style.background = getRandomColor();
+            }
+
+            function resetColor(event) {
+                event.target.style.background = "rgba(0, 0, 0, 0)";
+            }
+
+            let boxes = document.querySelectorAll(".item")
+
+
+            boxes.forEach(box => {
+                box.addEventListener("mouseover", changeColor);
+                box.addEventListener("mouseout", resetColor);
+            });
+
+            const tiles = document.querySelectorAll('.tile')
+            tiles.forEach(tile => {
+                tile.addEventListener('mouseover',() => {
+                    tile.style.mixBlendMode = 'hard-light';
+                });
+                tile.addEventListener('mouseout',() => {
+                    tile.style.mixBlendMode = 'normal';
+                });
+            });
+        </script>
+    </body>
+</html>
