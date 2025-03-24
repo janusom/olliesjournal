@@ -1,0 +1,64 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background: lightgoldenrodyellow;
+    margin: 0px;
+    transition: background .5s;
+}
+img{
+    max-width: 100%;
+}
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+}
+
+.square{
+    background-color: rgb(174, 224, 174);
+    height: 100px;
+    width: 100px;
+    animation: spin 3s infinite linear;
+    animation-play-state: paused;
+    transition: background .5s;
+
+}
+.buttons{
+    position: fixed;
+}
+
+.square.dark{
+    background: firebrick;
+}
+
+.square.spin{
+    animation-play-state: running;
+}
+
+@keyframes spin{
+    0%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}
+body.dark{
+    background: dimgray;
+}
+
+.lion{
+    width: 200px;
+    position: fixed;
+    bottom:10px;
+    right: 10px;
+    opacity: 0;
+    display: none;
+}
+.lion.reveal{
+    opacity: 100;
+    display:flex;
+}

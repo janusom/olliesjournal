@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>javascript exercise</title>
+        <link rel="stylesheet" href="main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <button onclick="change()">Click me...</button>
+        <div class="menu">
+            <p>Hello World</p>
+        </div>
+        <button onclick="glow()">glow</button>
+
+        <div class="gear"></div>
+        <script>
+            var menu= document.querySelector(".menu");
+            var gear= document.querySelector(".gear");
+
+            function change() {
+              console.log('it works!');
+
+              menu.classList.toggle("active");
+              gear.classList.toggle("active");
+            }
+        
+            function glow() {
+                menu.classList.toggle("glow");
+                gear.classList.toggle("glow");
+            }
+         </script>
+    </body>
+    
+</html>

@@ -1,0 +1,219 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(2, 2, 48);
+}
+img{
+    max-width: 100%;
+}
+
+@font-face {
+    font-family: apple-chancery;
+    src: url(Apple\ Chancery.ttf);
+}
+.container{
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:space-evenly;
+    background-color: rgb(2, 2, 48);
+    position: sticky;
+    margin: 0;
+}
+
+.content{
+    width:100%;
+    height: 100%;
+    max-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex: 1 1 calc(100% / 4);
+    flex-direction: row;
+    position: relative;
+    flex-wrap: wrap;
+    aspect-ratio: 1 / 1; 
+    background-color: rgba(12, 32, 89, 0.412);
+    margin: 0;
+    border: none;
+    padding: 10%;
+    align-items: center;
+    justify-content: center;
+    overflow: scroll;
+}
+
+.content p{
+    font-family: monospace;
+    font-size: 16pt; 
+    text-align: left;
+
+}
+.button{
+    display: flex;
+    width: 15vh;
+    height: 5vh;
+    align-items: center;
+    justify-content:center;
+    font-family: apple-chancery;
+    font-size: 12pt;
+    color: white;
+    border: 1pt solid white;
+    border-radius: calc(10vh / 1.5);
+    padding: .5%;
+
+}
+
+.button:hover{
+    background-color: rgba(255, 255, 255, 0.223);
+}
+
+.animation-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    border: 1pt solid white;
+}
+
+
+.gradient{
+    background: conic-gradient(from 45deg, 
+        rgb(2, 2, 48) 0%, 
+        rgb(14, 141, 221) 50%, 
+        rgb(2, 2, 48)  90%);
+    position: absolute;
+    height: 400%;
+    width: 400%;
+    animation: spin 10s linear infinite;
+    transform-origin: center;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.texture{
+    display: flex;
+    flex-direction: column;
+    width:100vw;
+    position: absolute;
+    object-fit: cover;
+    mix-blend-mode:color-dodge;
+}
+
+
+.orb{
+    width: 5vw;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    position: absolute;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.938) 10%, transparent 70%);
+    animation: spin-orb 7s alternate ease-in-out;
+}
+
+@keyframes spin-orb {
+    from {
+        transform: rotate(0deg) scale(0%);
+    }
+    to {
+        transform: rotate(360deg) scale(100%);
+    }
+}
+
+@keyframes spin-move-orb {
+    0% {
+        transform: rotate(0deg) scale(0%);
+    }
+    33% {
+        transform: rotate(360deg) scale(100%) translateY(0px);
+    }
+    66%{
+        transform: translateY(500px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.orbless{
+    width: 1.5vw;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    position: absolute;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.938) 10%, transparent 70%);
+    animation: spin-orb 3s alternate ease-in-out infinite backwards;
+}
+
+.logo-box{
+    width: 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    mix-blend-mode:lighten;
+    animation: spin-orb 7s ease-in-out;
+
+}
+p{
+    font-family: apple-chancery;
+    color: white;
+    text-align: center;
+
+}
+
+@media screen and (max-width: 900px) {
+    .logo-box{
+        width: 5vw;
+        position: relative;
+        mix-blend-mode:lighten;
+        animation: spin-orb 7s ease-in-out;
+    
+    }
+    
+    .orbless{
+        width: 5vw;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        position: absolute;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.938) 10%, transparent 70%);
+        animation: spin-orb 3s alternate ease-in-out infinite backwards;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .logo-box{
+        width: 6vw;
+        position: relative;
+        mix-blend-mode:lighten;
+        animation: spin-orb 7s ease-in-out;
+    
+    }
+    
+    .orb{
+        width: 10vw;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        position: absolute;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.938) 10%, transparent 70%);
+        animation: spin-orb 3s alternate ease-in-out infinite backwards;
+    }
+
+}
+
+a{
+    text-decoration: none;
+}
