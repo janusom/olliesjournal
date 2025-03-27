@@ -1,20 +1,20 @@
 $(".dark-btn").click(
-    function(){
-    $(".square").toggleClass("dark");
-    $("body").toggleClass("dark");
-  });
+  function(){
+  $(".square").toggleClass("dark");
+  $("body").toggleClass("dark");
+});
 
-  $(".spin-btn").click(
-    function(){
-    $(".square").toggleClass("spin")
-  });
+$(".spin-btn").click(
+  function(){
+  $(".square").toggleClass("spin")
+});
 
-  $(".reveal-btn").click(
-    function(){
-    $(".lion").addClass("reveal")
-    $(".reveal-btn").hide();
-  });
+$(".reveal-btn").click(
+  function(){
+  $(".lion").addClass("reveal")
+  $(".reveal-btn").hide();
+});
 
-  $(function(){
-    $(".draggable").draggable()
-  });
+$(function(){
+  $(".draggable").draggable()
+});

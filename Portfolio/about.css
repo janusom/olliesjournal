@@ -3,6 +3,7 @@
 }
 body{
     background-color: rgb(2, 2, 48);
+    margin: 0;
 }
 img{
     max-width: 100%;
@@ -23,6 +24,10 @@ img{
     background-color: rgb(2, 2, 48);
     position: sticky;
     margin: 0;
+}
+
+.container.day, .item.day, body.day{
+    background-color: lightgoldenrodyellow;
 }
 
 .content{
@@ -49,6 +54,7 @@ img{
     font-family: monospace;
     font-size: 16pt; 
     text-align: left;
+    color: white;
 
 }
 .button{
@@ -65,8 +71,35 @@ img{
     padding: .5%;
 
 }
+button{
+    width: 5vh;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    font-family: apple-chancery;
+    font-size: 12pt;
+    color: white;
+    background-color: rgb(2, 2, 48);
+    border: 1pt solid white;
+    border-radius: calc(10vh / 2);
+    padding: .5%;
 
-.button:hover{
+}
+
+.button.day{
+    color: rgb(39, 36, 24);
+    border: 1pt solid black;
+}
+
+button.day{
+    border: 1pt solid rgb(39, 36, 24);
+    background-color: lightgoldenrodyellow;
+    color: rgb(39, 36, 24);
+}
+
+
+.button:hover, button:hover{
     background-color: rgba(255, 255, 255, 0.223);
 }
 
@@ -82,6 +115,9 @@ img{
     border: 1pt solid white;
 }
 
+.animation-box.day{
+    border: 1pt, solid, black;
+}
 
 .gradient{
     background: conic-gradient(from 45deg, 
@@ -93,6 +129,13 @@ img{
     width: 400%;
     animation: spin 10s linear infinite;
     transform-origin: center;
+}
+
+.gradient.day{
+    background: conic-gradient(from 45deg, 
+        rgb(255, 222, 6) 0%, 
+        rgb(253, 255, 220) 50%, 
+        rgb(255, 222, 6)  90%);
 }
 
 @keyframes spin {
@@ -111,6 +154,10 @@ img{
     position: absolute;
     object-fit: cover;
     mix-blend-mode:color-dodge;
+}
+
+.texture.day{
+    opacity: 0;
 }
 
 
@@ -156,6 +203,10 @@ img{
     animation: spin-orb 3s alternate ease-in-out infinite backwards;
 }
 
+.orbless.day{
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.938) 10%, transparent 70%);
+}
+
 .logo-box{
     width: 3vw;
     display: flex;
@@ -167,11 +218,19 @@ img{
     animation: spin-orb 7s ease-in-out;
 
 }
-p{
-    font-family: apple-chancery;
-    color: white;
-    text-align: center;
 
+.logo-box.day{
+    mix-blend-mode: normal;
+}
+
+.credit{
+    font-family: monospace;
+    color: rgba(255, 255, 255, 0.708);
+    font-size: 8pt;
+}
+
+.credit.day{
+    color: black;
 }
 
 @media screen and (max-width: 900px) {
@@ -217,3 +276,4 @@ p{
 a{
     text-decoration: none;
 }
+
