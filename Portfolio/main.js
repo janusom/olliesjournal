@@ -68,7 +68,7 @@ $(document).ready(function(){
 
 
       if (currentSrc === "logo-blue.png") {
-          img.attr("src", "Logo-l-blue.png");
+          img.attr("src", "logo-l-blue.png");
       } else {
           img.attr("src", "logo-blue.png");
       }
