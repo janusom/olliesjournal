@@ -1,9 +1,9 @@
 *{
     box-sizing: border-box;
-    margin: 0;
 }
 body{
     background-color: rgb(2, 2, 48);
+    margin: 0;
 }
 img{
     max-width: 100%;
@@ -16,29 +16,13 @@ img{
 
 .main-container{
     height:100vh;
-    width: 100vw;
+    width: 100wh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content:space-evenly;
     background-color: rgba(2, 2, 48, 0.584);
     position: relative;
 }
-
-.container{
-    height: 10vh;
-    width: 100vw;
-    display: flex;
-    flex-direction:row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content:space-evenly;
-    background-color: rgb(2, 2, 48);
-    position: sticky;
-    margin: 0;
-}
-
 
 .nav{
     height:100%;
@@ -75,75 +59,27 @@ img{
 }
 .button{
     display: flex;
-    width: 15vh;
-    height: 5vh;
+    width: 100%;
     align-items: center;
     justify-content:center;
     font-family: apple-chancery;
     font-size: 12pt;
     color: white;
-    border: 1pt solid white;
-    border-radius: calc(10vh / 1.5);
-    padding: .5%;
 
-}
-
-.button-round{
-    display: flex;
-    width: 15vh;
-    height: 5vh;
-    align-items: center;
-    justify-content:center;
-    font-family: apple-chancery;
-    font-size: 12pt;
-    color: white;
-    border: 1pt solid white;
-    border-radius: calc(10vh / 1.5);
-    padding: .5%;
-
-}
-
-button{
-    width: 5vh;
-    height: 5vh;
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    font-family: apple-chancery;
-    font-size: 12pt;
-    color: white;
-    background-color: rgb(2, 2, 48);
-    border: 1pt solid white;
-    border-radius: calc(10vh / 2);
-    padding: .5%;
-
-}
-
-.button-round:hover, button:hover{
-    background-color: rgba(255, 255, 255, 0.223);
 }
 
 .project{
     display: flex;
     width: 24%; /* or a different percentage depending on how many you want per row */
     aspect-ratio: 1 / 1;  /* Makes it a square */
-    border: 0.5px solid rgb(255, 255, 255);
-    align-items: center;
-    justify-content:space-evenly;
+    border: 0.5px solid white;
     position: relative;
     overflow: hidden;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold ;
-    color: white;
-    font-size: larger;
-}
-
-.project a:hover{
-    opacity: 100%;
+    opacity: 25%;
 }
 
 .project:hover{
-    background-color: rgba(255, 255, 255, 0.255);
+    opacity: 100%;
 }
 .project img {
     width: 100%;
@@ -179,13 +115,6 @@ button{
     width: 400%;
     animation: spin 10s linear infinite;
     transform-origin: center;
-}
-
-.solid{
-    background: rgb(168 224 249);
-    position: absolute;
-    height: 400%;
-    width: 400%;
 }
 
 @keyframes spin {
@@ -305,54 +234,4 @@ p{
 a{
     text-decoration: none;
     cursor: pointer;
-}
-
-.button-round.day{
-    color: rgb(46 49 146);
-    border: 1pt solid rgb(46 49 146);
-}
-
-button.day{
-    border: 1pt solid rgb(46 49 146);
-    background-color: rgb(168 224 249);
-    color: rgb(46 49 146);
-}
-.animation-box.day{
-    border: 1pt, solid, black;
-}
-
-
-.gradient.day{
-    background: conic-gradient(from 45deg, 
-        rgb(168 224 249) 0%, 
-        rgb(253, 255, 220) 50%, 
-        rgb(168 224 249)  90%);
-}
-
-.texture.day{
-    opacity: 0;
-}
-
-
-.orbless.day{
-    background: radial-gradient(circle, rgb(253, 255, 220) 10%, transparent 70%);
-}
-
-.credit{
-    font-family: monospace;
-    color: rgba(255, 255, 255, 0.708);
-    font-size: 8pt;
-}
-.credit.day{
-    color: rgb(46 49 146);
-}
-
-.container.day, .item.day, body.day{
-    background-color: rgb(168 224 249);
-}
-
-
-
-.project.day:hover{
-    background-color: rgba(253, 255, 220, 0.571)
 }

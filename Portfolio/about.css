@@ -26,9 +26,7 @@ img{
     margin: 0;
 }
 
-.container.day, .item.day, body.day{
-    background-color: lightgoldenrodyellow;
-}
+
 
 .content{
     width:100%;
@@ -87,16 +85,6 @@ button{
 
 }
 
-.button.day{
-    color: rgb(39, 36, 24);
-    border: 1pt solid black;
-}
-
-button.day{
-    border: 1pt solid rgb(39, 36, 24);
-    background-color: lightgoldenrodyellow;
-    color: rgb(39, 36, 24);
-}
 
 
 .button:hover, button:hover{
@@ -115,9 +103,7 @@ button.day{
     border: 1pt solid white;
 }
 
-.animation-box.day{
-    border: 1pt, solid, black;
-}
+
 
 .gradient{
     background: conic-gradient(from 45deg, 
@@ -131,12 +117,6 @@ button.day{
     transform-origin: center;
 }
 
-.gradient.day{
-    background: conic-gradient(from 45deg, 
-        rgb(255, 222, 6) 0%, 
-        rgb(253, 255, 220) 50%, 
-        rgb(255, 222, 6)  90%);
-}
 
 @keyframes spin {
     from {
@@ -156,9 +136,7 @@ button.day{
     mix-blend-mode:color-dodge;
 }
 
-.texture.day{
-    opacity: 0;
-}
+
 
 
 .orb{
@@ -203,9 +181,7 @@ button.day{
     animation: spin-orb 3s alternate ease-in-out infinite backwards;
 }
 
-.orbless.day{
-    background: radial-gradient(circle, rgba(0, 0, 0, 0.938) 10%, transparent 70%);
-}
+
 
 .logo-box{
     width: 3vw;
@@ -219,9 +195,7 @@ button.day{
 
 }
 
-.logo-box.day{
-    mix-blend-mode: normal;
-}
+
 
 .credit{
     font-family: monospace;
@@ -229,9 +203,7 @@ button.day{
     font-size: 8pt;
 }
 
-.credit.day{
-    color: black;
-}
+
 
 @media screen and (max-width: 900px) {
     .logo-box{
@@ -277,3 +249,47 @@ a{
     text-decoration: none;
 }
 
+/* daymode */
+.container.day, .item.day, body.day{
+    background-color: rgb(168 224 249);
+}
+.button.day{
+    color: rgb(46 49 146);
+    border: 1pt solid rgb(46 49 146);
+}
+
+button.day{
+    border: 1pt solid rgb(46 49 146);
+    background-color: rgb(168 224 249);
+    color: rgb(46 49 146);
+}
+
+
+.animation-box.day{
+    border: 1pt, solid, black;
+}
+
+.gradient.day{
+    background: conic-gradient(from 45deg, 
+        rgb(168 224 249) 0%, 
+        rgb(253, 255, 220) 50%, 
+        rgb(168 224 249)  90%);
+}
+
+
+.texture.day{
+    opacity: 0;
+}
+
+.orbless.day{
+    background: radial-gradient(circle, rgb(253, 255, 220) 10%, transparent 70%);
+}
+
+.credit.day{
+    color: rgb(46 49 146);
+}
+
+
+.logo-box.day{
+    mix-blend-mode: normal;
+}
