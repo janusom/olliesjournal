@@ -13,6 +13,18 @@ img{
     font-family: apple-chancery;
     src: url(Apple\ Chancery.ttf);
 }
+
+
+@font-face {
+    font-family: azo-sans-reg;
+    src: url(AzoSansTestRegular.otf)
+}
+
+@font-face {
+    font-family: azo-sans-light;
+    src: url(AzoSansTestLight.otf)
+}
+
 .container{
     height: 10vh;
     width: 100vw;
@@ -70,18 +82,17 @@ img{
 
 }
 button{
-    width: 5vh;
-    height: 5vh;
     display: flex;
+    width: 15vh;
+    height: 5vh;
     align-items: center;
     justify-content:center;
     font-family: apple-chancery;
     font-size: 12pt;
-    color: white;
-    background-color: rgb(2, 2, 48);
     border: 1pt solid white;
-    border-radius: calc(10vh / 2);
+    border-radius: calc(10vh / 1.5);
     padding: .5%;
+
 
 }
 
@@ -292,4 +303,33 @@ button.day{
 
 .logo-box.day{
     mix-blend-mode: normal;
+}
+
+.modebutton{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    position: relative;
+    border-radius: calc(10vh / 2);
+}
+
+form{
+    font-family: azo-sans-reg;
+    color: white;
+    font-size: small;
+}
+
+input{
+    width: auto;
+    height: auto;
+    font-family:azo-sans-reg;
+    display: flex;
+    font-size: 12pt;
+    color: white;
+    background-color: rgb(2, 2, 48);
+    border: 1pt solid white;
+    border-radius: calc(10vh / 2);
+    padding: 2%;
+    
+
 }

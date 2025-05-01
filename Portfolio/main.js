@@ -42,12 +42,6 @@ $(document).ready(function(){
   });
 });
 
-$(document).ready(function(){
-  $("#daymode").click(function(){
-    let current = $(this).text();
-    $(this).text(current === "☼" ? "☾" : "☼");
-  });
-});
 
 // portfolio daymode
 
@@ -62,7 +56,7 @@ $(".mode-btn").click(
 });
 
 $(document).ready(function(){
-  $("#daymode-port").click(function(){
+  $("#daymode").click(function(){
       let img = $("#logo-port");
       let currentSrc = img.attr("src");
 
@@ -73,7 +67,7 @@ $(document).ready(function(){
           img.attr("src", "logo-blue.png");
       }
   });
-  $("#daymode-port").click(function(){
+  $("#daymode").click(function(){
     let img = $("#light-mode");
     let currentSrc = img.attr("src");
 
@@ -84,7 +78,7 @@ $(document).ready(function(){
         img.attr("src", "day mode.png");
     }
   });
-  $("#daymode-port").click(function(){
+  $("#daymode").click(function(){
     let img = $("#ham-1");
     let currentSrc = img.attr("src");
 
@@ -95,7 +89,7 @@ $(document).ready(function(){
         img.attr("src", "hamburger-lightblue.png");
     }
   });
-  $("#daymode-port").click(function(){
+  $("#daymode").click(function(){
     let img = $("#ham-2");
     let currentSrc = img.attr("src");
     if (currentSrc === "hamburger-blue.png") {
@@ -137,4 +131,112 @@ $(document).ready(function() {
     currentIndex = (currentIndex + 1) % images.length;
     $("#lightbox-img").attr("src", images[currentIndex]);
   });
+});
+
+
+//lightbox-2+galleries
+
+const galleries = {
+  project1: [
+    "project-1/mini-booklet.pdf",
+  ],
+  project2: [
+    "project-2/unconventional-love-poster.jpg",
+    "project-2/booklet.pdf"
+  ],
+  project3: [
+    "project-3/project-3.pdf"
+  ],
+  project4: [
+    "project-4/accordion.pdf",
+    "project-4/singlepage.pdf"
+  ],
+  project5: [
+    "project-5/cyan-book-pages.pdf"
+
+  ],
+  project6: [
+    "project-6/mark-making-digital.pdf",
+    "project-6/Mark-Making-Scans.pdf"
+
+  ],
+  project7: [
+    "project-7/abstract.pdf"
+
+  ],
+  project8: [
+    "project-8/TCA.pdf"
+
+  ],
+  project9: [
+    "project-9/1.jpg",
+    "project-9/2.jpg",
+    "project-9/3.jpg",
+    "project-9/4.jpg",
+
+  ],
+  project10: [
+    "cafe-condor.jpg",
+    "project-10/billboard.jpg",
+    "project-10/brand-manual.jpg",
+    "project-10/tins.jpg",
+
+  ],
+  project11: [
+
+  ],
+  project12: [
+    
+  ],
+  // add more projects as needed
+};
+
+let currentGallery = [];
+let currentIndex = 0;
+
+$(".project").click(function () {
+  const galleryKey = $(this).data("gallery");
+  currentGallery = galleries[galleryKey] || [];
+  currentIndex = 0;
+  const file = currentGallery[currentIndex];
+
+  if (file.endsWith(".pdf")) {
+    $("#lightbox2-img").hide();
+    $("#lightbox2-pdf").attr("src", file).show();
+  } else {
+    $("#lightbox2-pdf").hide();
+    $("#lightbox2-img").attr("src", file).show();
+  }
+
+  $("#lightbox-2").fadeIn();
+});
+
+$("#prev").click(function () {
+  if (currentGallery.length === 0) return;
+  currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+  const file = currentGallery[currentIndex];
+  if (file.endsWith(".pdf")) {
+    $("#lightbox2-img").hide();
+    $("#lightbox2-pdf").attr("src", file).show();
+  } else {
+    $("#lightbox2-pdf").hide();
+    $("#lightbox2-img").attr("src", file).show();
+  }
+});
+
+$("#next").click(function () {
+  if (currentGallery.length === 0) return;
+  currentIndex = (currentIndex + 1) % currentGallery.length;
+  const file = currentGallery[currentIndex];
+  if (file.endsWith(".pdf")) {
+    $("#lightbox2-img").hide();
+    $("#lightbox2-pdf").attr("src", file).show();
+  } else {
+    $("#lightbox2-pdf").hide();
+    $("#lightbox2-img").attr("src", file).show();
+  }
+});
+
+$(".close").click(function () {
+  $("#lightbox-2").fadeOut();
 });
