@@ -4,6 +4,7 @@
 }
 body{
     background-color: rgb(2, 2, 48);
+    overflow-x: hidden;
 }
 img{
     max-width: 100%;
