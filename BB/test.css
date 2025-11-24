@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+}
+
+body{
+    background-color: lightgoldenrodyellow;
+    overflow-x: hidden;
+    
+}
+
+@font-face {
+    font-family: iron-monger-bold;
+    src: url(ASSETS/fonts/Ironmonger-Black-Regular.ottf);
+    font-family: avenir-book;
+    src: url(ASSETS/fonts/Avenir-Book.ttf);
+    font-family: avenir-black;
+    src: url(ASSETS/fonts/Avenir-Black.ttf)
+}
+
+.screen{
+    height: 100vh;
+    width: 100vw;
+    display: block;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.screen.scroll{
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+img{
+    mix-blend-mode: multiply;
+    object-fit: cover;
+}
+
+
+.title{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    width: 100vw;
+    padding: 1%;
+}
+
+
+.title img{
+    object-fit: fill;
+    height: 75%;
+    width: auto;
+}
+
+.nav-bar{
+    display: flex;
+    position: sticky;
+    flex-direction: row;
+    align-items:flex-start;
+    height: 5vh;
+    width: 100vw;
+    border: solid, black, 1px;
+    padding-left: 3%;
+    top: 0;
+}
+
+.nav-buttons{
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    object-fit: cover;
+    font-family: avenir-book;
+}
+
+.nav-bar.hide{
+    border: 0px;
+}
+
+.button{
+    width: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+}
+
+.button.hide{
+    visibility: hidden;
+}
+
+.home{
+    width: 5%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+    visibility: hidden;
+}
+
+.home.show{
+    visibility: visible;
+}
+
+.home img{
+    object-fit: scale-down;
+    height: 100%;
+    width: auto;
+}
+
+
+.frame{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    padding-left: 10%;
+    padding-right: 10%;
+    scroll-snap-align: start;
+}
+.picture-area {
+    flex-basis: auto;
+    height: 75%;
+    width: 75%;
+    overflow-y: hidden;
+}
+
+.text-area{
+    display: flex;
+    height: 80%;
+    width: 100%;
+    overflow-y: hidden;
+    align-items: center;
+    justify-content: center;
+    padding: 20%;
+}
+
+.text-box{
+    flex-basis: auto;
+    width: auto;
+    height: auto;
+    font-family: avenir-book;
+}
+
+.title-header{
+    flex-basis: auto;
+    flex-direction: column;
+    width: 100%;
+    height: 5%;
+    margin: 0;
+}
+
+.content-area{
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+
+.picture img{
+    object-fit: scale-down;
+}

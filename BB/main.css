@@ -1,0 +1,350 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    background-color: lightgoldenrodyellow;
+}
+img{
+    max-width: 100%;
+}
+@font-face {
+    font-family: iron-monger-bold;
+    src: url(ASSETS/fonts/Ironmonger\ Black\ Regular.otf);
+    font-family: avenir-book;
+    src: url(ASSETS/fonts/Avenir-Book.ttf);
+    font-family: avenir-black;
+    src: url(ASSETS/fonts/Avenir-Black.ttf)
+}
+
+.home{
+    position: fixed;
+    display: none;
+    height: 50px;
+    width: 50px;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+#section{
+    margin-left: 15%;
+}
+   
+
+@media screen and (max-width: 1280px) {
+    body{
+        background-color: lavender;
+    }
+
+    .home{
+        display: block;
+    }
+ #content{
+        width: 100%;
+        margin-left: 0;
+        position: fixed;
+        margin: 30px;
+        scroll-snap-type: none;
+        overflow-y: scroll;
+    }
+#section{
+    margin-left: 10%;
+}
+    #ac{
+        font-size: x-small;
+    }
+    #at{
+        font-size: x-large;
+    }
+
+    #text{
+        font-size: medium;
+        width: 75%;
+    }
+    #tc{
+        font-size: 15px;
+        
+    }
+    #arrow, #nav{
+        display: none;
+    }
+
+    img{
+        mix-blend-mode: multiply;
+    }
+}
+   
+
+/* phone */
+@media screen and (max-width: 700px) {
+    body{
+        background-color: lightblue;
+        mix-blend-mode: multiply;
+    }
+    #content{
+        width: auto;
+        margin-left: 10%;
+        position: fixed;
+        scroll-snap-type: none;
+        overflow-y: scroll;
+    }
+    #tf{
+        padding-top: 250px;
+        padding-bottom: 250px;
+        justify-content: space-around;
+    }
+    #section{
+    margin-left: 0;
+}
+
+    #ac{
+        font-size: x-small;
+    }
+    #at{
+        font-size: x-large;
+    }
+
+    #text{
+        font-size: small;
+        width: 100%;
+    }
+    #tc{
+        font-size: 15px;
+        
+    }
+    #arrow, #nav{
+        display: none;
+    }
+
+    img{
+        mix-blend-mode: multiply;
+    }
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+img:hover{
+    mix-blend-mode: normal;
+}
+.screen{
+    height: 100vh;
+    width: 100vw;
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.content-area{
+    display: block;
+    width: 85%;
+    height:100%;
+    position: relative;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    margin-left: 15%;
+    padding: 5%
+}
+
+.nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    width: 15%;
+    height: 100%;
+    position: fixed;
+    margin-left: 0%;
+    padding-top: 5vh;
+    padding-bottom: 1vh;
+    padding-left: 10vw;
+    padding-right: 5vw;
+    gap: 10px;
+}
+
+.nav.border{
+    border-right-style: solid;
+        border-right-width: 1px;
+        border-right-color: black;
+    padding-left: calc(10vw - 1px);
+    padding-right: calc(5vw - 1px);
+}
+
+.nav-button{
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    padding-right: 5vw;
+    gap: 5px;
+}
+
+.nav-button p{
+    font-family: avenir-book;
+}
+
+.nav-rest{
+    height: 90%;
+    display: flex;
+    visibility: hidden;
+    flex-direction: column;
+    padding-right: 5vw;
+    justify-content:space-between;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    font-family: avenir-black;
+    gap: 20px;
+}
+
+.nav-rest.active{
+    visibility: visible;
+}
+
+.searchbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 5px;
+}
+
+.search-line{
+    width: 73px;
+    border-bottom-style: solid;
+        border-bottom-width: 1px;
+        border-bottom-color: black;
+}
+
+.website-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 10%;
+    position: relative;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    padding-left: 10%;
+    padding-right: 10%;
+    scroll-snap-align: start;
+    gap: 10px;
+}
+
+.frame{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    gap: 10px;
+    scroll-snap-align: start;
+    padding: 25px;
+}
+
+.picture-area {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    overflow-y: hidden;
+}
+
+.title-picture-area {
+    display: flex;
+    height: 90%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    overflow-y: hidden;
+}
+
+
+
+.picture-area img {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    padding: 0;
+}
+
+.text-area{
+    display: flex;
+    flex-direction: row;
+    height: 90%;
+    width: 100%;
+    overflow-y: scroll;
+    gap: 30px;
+}
+
+div.cards, .annex {
+  gap: 4px;
+  padding: 4px;
+}
+
+div.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20ch, 1fr));
+}
+
+article {
+  border: 1px dotted grey;
+}
+
+article.art.wide {
+  grid-column: span 2;
+}
+
+img{
+    mix-blend-mode: multiply;
+}
+
+.text-box{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    height: 100%;
+    width: 50%;
+}
+
+.title-header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+}
+
+.website-title p{
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.article-tile{
+    font-family: avenir-black; font-size:xx-large; margin-top: 1.5%
+}
+.article-credit{
+    font-family: avenir-book; font-size:medium; margin-top: 0.5%
+    
+}
+
+#arrow.flip{
+    transform: rotate(180deg);
+}
+
+.title-credit{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px; 
+    font-style: italic; 
+    text-align: center;
+}
