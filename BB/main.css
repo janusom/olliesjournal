@@ -17,14 +17,25 @@ img{
     font-family: avenir-black;
     src: url(ASSETS/fonts/Avenir-Black.ttf)
 }
-
-.home{
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid black;
+    margin: 1em 0;
+    padding: 0;
+}
+#bb{
     position: fixed;
     display: none;
+    visibility: hidden;
     height: 50px;
     width: 50px;
     margin-top: 15px;
     margin-left: 15px;
+    z-index: 10001;
+    cursor: pointer;
+    pointer-events: auto;
 }
 
 #section{
@@ -34,11 +45,29 @@ img{
 
 @media screen and (max-width: 1280px) {
     body{
-        background-color: lavender;
+        background-color: lightgoldenrodyellow;
     }
 
-    .home{
+    #t-a-g{
+        flex-direction: column;
+    }
+
+    #tf{
+        justify-content: space-around;
+        height: auto;
+        width: auto;
+    }
+
+    #bb{
         display: block;
+        visibility: visible;
+    }
+
+    #bb.active{
+        margin-left: 10%;
+    }
+    .screen-nav.active{
+        width: 25vw;
     }
  #content{
         width: 100%;
@@ -66,6 +95,7 @@ img{
         font-size: 15px;
         
     }
+    
     #arrow, #nav{
         display: none;
     }
@@ -78,10 +108,28 @@ img{
 
 /* phone */
 @media screen and (max-width: 700px) {
+    
     body{
-        background-color: lightblue;
+        background-color: lightgoldenrodyellow;
         mix-blend-mode: multiply;
     }
+    #screen-nav.active{
+    width: 100vw;
+    }
+
+     #bb.active{
+        margin-left: 46vw;
+    }
+    #p-a-g{
+        overflow-y: scroll;
+        display: block;
+        height: auto;
+        padding: 0;
+    }
+    #p-a-g img{
+        height: 50%;
+    }
+    
     #content{
         width: auto;
         margin-left: 10%;
@@ -89,14 +137,14 @@ img{
         scroll-snap-type: none;
         overflow-y: scroll;
     }
-    #tf{
-        padding-top: 250px;
-        padding-bottom: 250px;
-        justify-content: space-around;
+    #tpa {
+        flex-direction: column;
     }
+
+
     #section{
     margin-left: 0;
-}
+    }
 
     #ac{
         font-size: x-small;
@@ -142,6 +190,29 @@ img:hover{
     margin: 0;
     padding: 0;
 }
+
+.screen-nav{
+    display: none;
+    visibility: hidden;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    padding: 20px;
+    background-color: lightgoldenrodyellow;
+    font-family: avenir-black;
+}
+
+.screen-nav.active{
+    display: flex;
+    visibility: visible;
+}
+
 
 .content-area{
     display: block;
@@ -263,7 +334,7 @@ img:hover{
 
 .title-picture-area {
     display: flex;
-    height: 90%;
+    height: 100%;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -281,8 +352,17 @@ img:hover{
 
 .text-area{
     display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    gap: 30px;
+}
+
+.text-area-gallery{
+    display: flex;
     flex-direction: row;
-    height: 90%;
+    height: 100%;
     width: 100%;
     overflow-y: scroll;
     gap: 30px;
