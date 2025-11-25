@@ -39,7 +39,8 @@ hr {
 }
 
 #section{
-    margin-left: 15%;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
 }
    
 
@@ -89,7 +90,7 @@ hr {
 
     #text{
         font-size: medium;
-        width: 75%;
+        width: 100%;
     }
     #tc{
         font-size: 15px;
@@ -120,6 +121,11 @@ hr {
      #bb.active{
         margin-left: 46vw;
     }
+
+    #t-a-g{
+        display: block;
+        height: 100%;
+    }
     #p-a-g{
         overflow-y: scroll;
         display: block;
@@ -136,6 +142,9 @@ hr {
         position: fixed;
         scroll-snap-type: none;
         overflow-y: scroll;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
     }
     #tpa {
         flex-direction: column;
@@ -144,6 +153,10 @@ hr {
 
     #section{
     margin-left: 0;
+    padding: 0;
+    gap: 20px;
+    scroll-snap-type: none;
+    display: flex;
     }
 
     #ac{
@@ -154,8 +167,10 @@ hr {
     }
 
     #text{
-        font-size: small;
+        font-size: larger;
         width: 100%;
+        display: block;
+        height: auto;
     }
     #tc{
         font-size: 15px;
@@ -316,12 +331,19 @@ img:hover{
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    width: 100%;
+    width: auto;
     height: 100vh;
     position: relative;
     gap: 10px;
     scroll-snap-align: start;
     padding: 25px;
+}
+
+#re-f{
+    justify-content: flex-start;
+}
+#section{
+    height: auto;
 }
 
 .picture-area {
@@ -330,6 +352,7 @@ img:hover{
     align-items: center;
     justify-content: space-between;
     overflow-y: hidden;
+    width: 100%;
 }
 
 .title-picture-area {
@@ -362,10 +385,8 @@ img:hover{
 .text-area-gallery{
     display: flex;
     flex-direction: row;
-    height: 100%;
-    width: 100%;
-    overflow-y: scroll;
-    gap: 30px;
+    height: 90%;
+    width: 90%;
 }
 
 div.cards, .annex {
@@ -395,7 +416,16 @@ img{
     flex-direction: column;
     justify-content:center;
     height: 100%;
-    width: 50%;
+    width: 100%;
+    font-size: larger;
+}
+
+.text-box-gallery{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    font-size: large;
 }
 
 .title-header{
