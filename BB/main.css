@@ -125,6 +125,7 @@ hr {
     #t-a-g{
         display: block;
         height: 100%;
+        margin-left: 0;
     }
     #p-a-g{
         overflow-y: scroll;
@@ -400,7 +401,8 @@ div.cards {
 }
 
 article {
-  border: 1px dotted grey;
+  border: 1px solid black;
+  padding: 10px;
 }
 
 article.art.wide {
@@ -418,6 +420,13 @@ img{
     height: 100%;
     width: 100%;
     font-size: larger;
+}
+p{
+    font-family: avenir-book;
+}
+
+h1, h2, h3 {
+    font-family: avenir-black;
 }
 
 .text-box-gallery{
@@ -457,4 +466,44 @@ img{
     font-size: 25px; 
     font-style: italic; 
     text-align: center;
+}
+
+#error-box {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid black;
+    padding: 12px;
+    max-width: 250px;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    font-family: avenir-black;
+    font-size: 14px;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.9);
+    transition: opacity 0.3s 
+ease, transform 0.3s 
+ease, visibility 0.3s;
+}
+
+#error-box.visible {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid black;
+    padding: 12px;
+    max-width: 250px;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    font-family: avenir-black;
+    font-size: 14px;
+    opacity: 0;
+    visibility: visible;
+    transform: scale(0.9);
+    transition: opacity 0.3s 
+ease, transform 0.3s 
+ease, visibility 0.3s;
+}
+.info{
+    padding:5px;
+
 }
