@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    top: 0;
 }
 body{
     background-color: lightblue;
@@ -21,7 +22,6 @@ img{
     border: 1px,solid;
     width: 200vw;
     height: 100vh;
-    padding: 10px;
     overflow-x: auto;
     background: linear-gradient(45deg,rgb(0, 208, 255), white);
     background-size: 400% 400%; 

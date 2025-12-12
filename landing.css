@@ -1,0 +1,540 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+@import url("https://use.typekit.net/bfm1oyo.css");
+
+@font-face {
+font-family:"megazoid";
+src:url("https://use.typekit.net/af/551f34/0000000000000000774c88ca/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/551f34/0000000000000000774c88ca/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/551f34/0000000000000000774c88ca/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"cemer";
+src:url("https://use.typekit.net/af/4c3aa8/0000000000000000774cf8b5/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/4c3aa8/0000000000000000774cf8b5/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/4c3aa8/0000000000000000774cf8b5/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+font-face {
+font-family:"neighbor-stencil";
+src:url("https://use.typekit.net/af/f5a19a/0000000000000000774b0e74/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/f5a19a/0000000000000000774b0e74/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/f5a19a/0000000000000000774b0e74/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"tt-autonomous";
+src:url("https://use.typekit.net/af/b92e50/0000000000000000774f76d4/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/b92e50/0000000000000000774f76d4/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/b92e50/0000000000000000774f76d4/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"new-astro";
+src:url("https://use.typekit.net/af/0d1a5a/0000000000000000775091ad/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/0d1a5a/0000000000000000775091ad/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/0d1a5a/0000000000000000775091ad/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
+}
+
+
+@font-face {
+font-family:"lone-pine";
+src:url("https://use.typekit.net/af/6d480c/0000000000000000775091d2/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/6d480c/0000000000000000775091d2/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/6d480c/0000000000000000775091d2/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"kings";
+src:url("https://use.typekit.net/af/84045f/0000000000000000773b5d08/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/84045f/0000000000000000773b5d08/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/84045f/0000000000000000773b5d08/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"club-lithographer";
+src:url("https://use.typekit.net/af/adbf8e/00000000000000007752992a/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"),url("https://use.typekit.net/af/adbf8e/00000000000000007752992a/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"),url("https://use.typekit.net/af/adbf8e/00000000000000007752992a/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype");
+font-display:auto;font-style:italic;font-weight:400;font-stretch:normal;
+}
+
+
+@font-face {
+font-family:"monotalic";
+src:url("https://use.typekit.net/af/1bffcc/00000000000000007735b6df/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/1bffcc/00000000000000007735b6df/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/1bffcc/00000000000000007735b6df/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"bomboniere";
+src:url("https://use.typekit.net/af/2c7836/0000000000000000774d2062/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff2"),url("https://use.typekit.net/af/2c7836/0000000000000000774d2062/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff"),url("https://use.typekit.net/af/2c7836/0000000000000000774d2062/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("opentype");
+font-display:auto;font-style:italic;font-weight:700;font-stretch:normal;
+}
+
+@font-face {
+font-family:"bomboniere";
+src:url("https://use.typekit.net/af/e9e72d/0000000000000000774d2066/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"),url("https://use.typekit.net/af/e9e72d/0000000000000000774d2066/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"),url("https://use.typekit.net/af/e9e72d/0000000000000000774d2066/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype");
+font-display:auto;font-style:italic;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"bomboniere";
+src:url("https://use.typekit.net/af/aa76a7/0000000000000000774d206b/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/aa76a7/0000000000000000774d206b/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/aa76a7/0000000000000000774d206b/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"bomboniere";
+src:url("https://use.typekit.net/af/5442d4/0000000000000000774d2063/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/5442d4/0000000000000000774d2063/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/5442d4/0000000000000000774d2063/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
+}
+
+@font-face {
+font-family:"bomboniere-hairline";
+src:url("https://use.typekit.net/af/4b762e/0000000000000000774d205c/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i1&v=3") format("woff2"),url("https://use.typekit.net/af/4b762e/0000000000000000774d205c/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i1&v=3") format("woff"),url("https://use.typekit.net/af/4b762e/0000000000000000774d205c/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i1&v=3") format("opentype");
+font-display:auto;font-style:italic;font-weight:100;font-stretch:normal;
+}
+
+@font-face {
+font-family:"bomboniere-hairline";
+src:url("https://use.typekit.net/af/e5e763/0000000000000000774d2067/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n1&v=3") format("woff2"),url("https://use.typekit.net/af/e5e763/0000000000000000774d2067/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n1&v=3") format("woff"),url("https://use.typekit.net/af/e5e763/0000000000000000774d2067/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n1&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:100;font-stretch:normal;
+}
+
+.tk-bomboniere { font-family: "bomboniere",sans-serif; }
+.tk-bomboniere-hairline { font-family: "bomboniere-hairline",sans-serif; }
+@font-face {
+font-family:"ivyora-display";
+src:url("https://use.typekit.net/af/70bbbc/0000000000000000774ba014/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/70bbbc/0000000000000000774ba014/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/70bbbc/0000000000000000774ba014/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"ivyora-text";
+src:url("https://use.typekit.net/af/c5378f/0000000000000000774ba010/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/c5378f/0000000000000000774ba010/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/c5378f/0000000000000000774ba010/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+    font-family: apple-chancery;
+        src: url(Typefaces/apple-chancery/Apple\ Chancery.ttf);
+}
+
+@font-face{
+    font-family: iron-monger;
+        src: url(Typefaces/Ironmonger/Ironmonger-Black-Regular.otf);    
+}
+
+@font-face{
+     font-family: azo-sans-reg;
+        src: url(Typefaces/Azo-sans/AzoSansTestRegular.otf);
+}
+
+@font-face{
+    font-family: azo-sans-mono;
+        src: url(Typefaces/Azo-sans/AzoMonoTestRegular.otf);
+}
+
+@font-face{
+    font-family: antone;
+    src: url(Typefaces/antone/Antone-DEMO.ttf)
+}
+
+@font-face{
+    font-family: apple-garamond;
+    src: url(Typefaces/apple_garamond/AppleGaramond.ttf);
+}
+
+@font-face{
+    font-family: babet-demo;
+    src: url(Typefaces/babet-demo/Babet-Demo.ttf);
+}
+
+@font-face{
+    font-family: bellavoir-serif;
+    src: url(Typefaces/bellavoir_serif/BellavoirSerif_PERSONAL_USE_ONLY.otf);
+}
+
+@font-face {
+    font-family: braven;
+    src: url(Typefaces/braven/BravenRegular.otf);
+}
+
+@font-face {
+    font-family: catchye;
+    src: url(Typefaces/catchye/Catchye.otf);
+}
+
+@font-face {
+    font-family: cronde;
+    src: url(Typefaces/cronde/CRONDE.otf);
+}
+
+@font-face {
+    font-family: designer;
+    src: url(Typefaces/designer/Designer.otf);
+}
+
+@font-face {
+    font-family: diamonds;
+    src: url(Typefaces/diamonds_3/Diamonds-Regular.otf);
+}
+
+@font-face {
+    font-family: exo;
+    src: url(Typefaces/exo_2/Exo2-Medium.otf);
+}
+
+@font-face {
+    font-family: gobold;
+    src: url(Typefaces/gobold_blocky/Gobold-Blocky-Regular.otf);
+}
+
+@font-face {
+    font-family: griffiths;
+    src: url(Typefaces/griffiths/Griffiths.otf);
+}
+
+@font-face {
+    font-family: hugolers;
+    src: url(Typefaces/hugolers/Hugolers-Stylish.ttf);
+}
+
+@font-face {
+    font-family: kawoszeh;
+    src: url(Typefaces/kawoszeh/kawoszeh.ttf);
+}
+
+@font-face {
+    font-family: la-obrige;
+    src: url(Typefaces/la_obrige/La-Obrige.otf);
+}
+
+@font-face {
+    font-family: liberation;
+    src: url(Typefaces/liberation_serif/LiberationSerif-Regular.ttf);
+}
+
+@font-face {
+    font-family: moana-rainy;
+    src: url(Typefaces/moana_rainy/MoanaRainyDemoRegular.ttf);
+}
+
+@font-face {
+    font-family: molgan;
+    src: url(Typefaces/molgan/Molgan.otf);
+}
+
+@font-face {
+    font-family: newyork;
+    src: url(Typefaces/newyork/NewYork-PERSONAL-USE.otf);
+}
+
+@font-face {
+    font-family: pharmacy;
+    src: url(Typefaces/pharmacy/PHARMACY.ttf);
+}
+@font-face {
+    font-family: radicalblock;
+    src: url(Typefaces/radicalblock/radicalblock.ttf);
+}
+
+@font-face {
+    font-family: soligant;
+    src: url(Typefaces/soligant/Soligant.otf);
+}
+
+@font-face {
+    font-family: typoround;
+    src: url(Typefaces/typo_round/Typo_Round_Regular_Demo.otf);
+}
+
+@font-face {
+    font-family: vonique;
+    src: url(Typefaces/vonique_64/Vonique64.ttf);
+}
+
+@font-face {
+    font-family: walkway;
+    src: url(Typefaces/walkway/Walkway-Bold.ttf);
+}
+
+@font-face {
+    font-family: will-grace;
+    src: url(Typefaces/will_grace/WILLG___.TTF);
+}
+
+@media screen and (max-width: 1000px) {
+
+    .screen{
+        margin-top: 5vh;
+        height: auto;
+        width: auto;
+    }
+
+    #header{
+        text-align: center;
+        font-size: 13vw;
+    }
+
+    #mod{
+        margin-left: 0;
+    }
+    #one, #two, #three{
+        width: 100%;
+    }
+    #cont{
+        width: 100vw;
+        height: 100vh;
+        padding: 10px;
+    }
+    #pan{ 
+        width: 100%;
+        height: 100%;
+        display: none;
+        position: relative;
+        margin-left: 0;
+    }
+    #ent{
+        align-items: start;
+    }
+    #logo{
+        visibility: visible;
+        display: block;
+        height:10vh;
+    }
+
+    #mobc{
+        visibility: visible;
+        display: flex;
+        align-items: center;
+    }
+
+    #color1m, #color2m, #color3m{
+    width: 10%;
+    background-color: white;
+    height: 100%;
+    border: solid, 1px, black;
+}
+    #colorbuttonm{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+
+}
+ #logo{
+    visibility: hidden;
+    display: none;
+ }
+
+ .mob-colors{
+    display: none;
+    position: fixed;
+    top: 0;
+    flex-direction: row;
+    align-items: flex-start;
+    visibility: hidden;
+     border-bottom-style: solid;
+        border-bottom-width: 1px;
+        border-bottom-color: black; 
+    background-color: white;
+    width: 100vw;
+    height: 5vh;
+    padding: 1vh;
+}
+
+.mob-palette{
+    margin-left: 10px;
+    visibility: hidden;
+    display: none;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+    height: 100%;
+    width: 50%;
+    }
+
+.mob-palette.active{
+    visibility: visible;
+    display: flex;
+    }
+
+h1{
+    font-family: "azo-sans-mono"; font-weight:200; font-size: 6vw;
+}
+
+h2{
+    font-family: azo-sans-mono; font-weight:200;
+}
+p{
+    font-family: azo-sans-reg;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid rgb(46 49 146);
+    margin: 1em 0;
+    padding: 0;
+}
+
+.toggle, a{
+    color: rgb(46 49 146);
+    text-decoration: none;
+    cursor: pointer;
+    height: auto;
+    width: auto;
+}
+
+
+.toggle:hover, a:hover{
+    text-decoration: underline;
+}
+
+.screen{
+    display: flex;
+    flex-direction:row;
+    width: 100vw;
+    height: 100vh;
+}
+
+.content{
+    width:90vw;
+    height: 100%;
+    padding: 1%;
+    overflow-y: scroll;
+}
+.about{
+    width: 100%;
+}
+
+.panel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:10vw;
+    height:100vh;
+    padding: 1%;
+    margin-left: 90vw;
+    overflow: hidden;
+    position: fixed;
+    border-left-style: solid;
+        border-left-width: 1px;
+        border-left-color: black;
+}
+
+.nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:center;
+    width: 100%;
+    height: 90%;
+}
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 10%;
+}
+
+.work{
+    display:none;
+    visibility: hidden;
+    width: 100%;
+    height: auto;
+}
+
+.work.active{
+    display: block;
+    flex-direction: column;
+    visibility:visible;
+}
+
+.entries{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    height: auto;
+}
+.entry-one, .entry-two, .entry-three{
+    display: flex;
+    gap: 10%;
+    height:auto;
+    width: 70%;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1%;
+}
+
+.entry-one,img, .entry-two.img, .entry-three.img{
+    object-fit:contain;
+}
+
+.more{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+
+.reveal{
+    display:none;
+    visibility: hidden;
+    margin-left: 10%;
+}
+
+.reveal.active{
+    display: block;
+    visibility:visible;
+}
+
+div.cards, .annex {
+  gap: 4px;
+  padding: 4px;
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap:5%;
+    padding-bottom: 1%;
+}
+
+.palette{
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5%;
+    height: 70%;
+    width: 100%;
+    margin-top: 9vh;
+}
+
+.palette.active{
+    visibility: visible;
+
+}
+
+.color-1, .color-2, .color-3{
+    width: 50%;
+    height: 20%;
+    border: solid, 1px, black;
+}
+
+.regenerate{
+   font-size: auto;
+   text-align: left;
+   text-decoration: dotted;
+}
+
+.color-button{
+    font-family: "azo-sans-mono";
+    height: 5vh;
+    width: auto;
+    text-align: left;
+    font-size: xx-large;
+}
