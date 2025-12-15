@@ -262,10 +262,12 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
 
 @media screen and (max-width: 1000px) {
 
-    .screen{
-        margin-top: 5vh;
+    #screen{
         height: auto;
+        flex-direction: column;
+        position: absolute;
         width: auto;
+        overflow-y: scroll;
     }
 
     #header{
@@ -281,8 +283,9 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
     }
     #cont{
         width: 100vw;
-        height: 100vh;
+        height: auto;
         padding: 10px;
+        margin-top: 5vh;
     }
     #pan{ 
         width: 100%;
@@ -301,16 +304,20 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
     }
 
     #mobc{
+        height: 5vh;
+        position: fixed;
         visibility: visible;
         display: flex;
+        top: 0;
         align-items: center;
+        background-color: whitesmoke;
+
     }
 
     #color1m, #color2m, #color3m{
-    width: 10%;
-    background-color: white;
+    width: 40%;
     height: 100%;
-    border: solid, 1px, black;
+    border: solid, 1px, rgb(46 49 146);
 }
     #colorbuttonm{
         display: flex;
@@ -321,10 +328,10 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
 
 
 }
- #logo{
-    visibility: hidden;
-    display: none;
- }
+ 
+body{
+    background-color: whitesmoke;
+}
 
  .mob-colors{
     display: none;
@@ -335,12 +342,12 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
     visibility: hidden;
      border-bottom-style: solid;
         border-bottom-width: 1px;
-        border-bottom-color: black; 
-    background-color: white;
+        border-bottom-color: rgb(46 49 146); 
     width: 100vw;
     height: 5vh;
     padding: 1vh;
 }
+
 
 .mob-palette{
     margin-left: 10px;
@@ -350,7 +357,7 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
     align-items: flex-start;
     gap: 10px;
     height: 100%;
-    width: 50%;
+    width: 100%;
     }
 
 .mob-palette.active{
@@ -363,10 +370,11 @@ h1{
 }
 
 h2{
-    font-family: azo-sans-mono; font-weight:200;
+    font-family: "ivyora-text"; font-weight:200;
 }
 p{
     font-family: azo-sans-reg;
+    color: rgb(78, 47, 79);
 }
 
 hr {
@@ -420,7 +428,7 @@ hr {
     position: fixed;
     border-left-style: solid;
         border-left-width: 1px;
-        border-left-color: black;
+        border-left-color: rgb(46 49 146);
 }
 
 .nav{
@@ -436,8 +444,7 @@ hr {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 100%;
-    height: 10%;
+    color: rgb(46 49 146);
 }
 
 .work{
@@ -522,12 +529,13 @@ div.cards, .annex {
 .color-1, .color-2, .color-3{
     width: 50%;
     height: 20%;
-    border: solid, 1px, black;
+    border: solid, 1px, rgb(46 49 146);
 }
 
 .regenerate{
    font-size: auto;
    text-align: left;
+   height: 5vh;
    text-decoration: dotted;
 }
 
@@ -537,4 +545,15 @@ div.cards, .annex {
     width: auto;
     text-align: left;
     font-size: xx-large;
+    animation: bounce 1s alternate infinite;
+}
+
+@keyframes bounce {
+    0% {
+        transform: rotate(-25deg);
+    }
+    100% {
+        transform: rotate(25deg);
+    }
+    
 }

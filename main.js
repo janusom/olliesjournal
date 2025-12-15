@@ -160,6 +160,7 @@ function randomHexColor() {
   return "#" + Math.floor(Math.random() * 16777215).toString(16).padStart(6, "0");
 }
 
+
 function hexToRgb(hex) {
   const cleanHex = hex.replace("#", "");
   return {
@@ -168,6 +169,37 @@ function hexToRgb(hex) {
     b: parseInt(cleanHex.substring(4, 6), 16)
   };
 }
+
+function hexToHSL(hex) {
+  let { r, g, b } = hexToRgb(hex);
+  r /= 255; g /= 255; b /= 255;
+
+  const max = Math.max(r, g, b);
+  const min = Math.min(r, g, b);
+  let h, s, l = (max + min) / 2;
+
+  if (max === min) {
+    h = s = 0;
+  } else {
+    const d = max - min;
+    s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+
+    switch (max) {
+      case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+      case g: h = (b - r) / d + 2; break;
+      case b: h = (r - g) / d + 4; break;
+    }
+
+    h *= 60;
+  }
+
+  return {
+    h: Math.round(h),
+    s: Math.round(s * 100),
+    l: Math.round(l * 100)
+  };
+}
+
 
 function rgbToHex(r, g, b) {
   return (
@@ -187,6 +219,7 @@ function luminance(r, g, b) {
   });
   return 0.2126 * a[0] + 0.7152 * a[1] + 0.0722 * a[2];
 }
+
 
 function contrastRatio(hex1, hex2) {
   const { r: r1, g: g1, b: b1 } = hexToRgb(hex1);
@@ -227,27 +260,9 @@ function vibrantHexColor() {
 }
 
 function vibrantHSL() {
-  let h;
-
-  while (true) {
-    const candidate = Math.floor(Math.random() * 360);
-
-    const good =
-      (candidate >= 10 && candidate < 40) ||     // oranges & rusts
-      (candidate >= 170 && candidate < 260) ||   // blues & purples (skip greenish 160–170)
-      (candidate >= 280 && candidate < 330);     // magentas & pinks
-
-    // Notice the complete removal of all ranges 40°–170° → ALL GREENS ARE GONE
-
-    if (good) {
-      h = candidate;
-      break;
-    }
-  }
-
-  const s = 85 + Math.floor(Math.random() * 15);  // 85–100 saturated
-  const l = 30 + Math.floor(Math.random() * 15);  // 30–45 darker vibrant
-
+  const h = Math.floor(Math.random() * 360);      // any hue
+  const s = 85 + Math.floor(Math.random() * 15);  // 85–100% saturated
+  const l = 30 + Math.floor(Math.random() * 15);  // 30–45% lightness
   return { h, s, l };
 }
 
@@ -325,12 +340,16 @@ function pastelizeHSL(hsl) {
 
 
   // Apply vibrant to headers + links
-  document.querySelectorAll("h1, h3,#dice, #dice2").forEach(el => {
+  document.querySelectorAll("h1, h3,#dice, #dice2, #font, #colors, #re-color2, #re-font2").forEach(el => {
     el.style.fontFamily = randomFont;
   });
 
    document.querySelectorAll("h1, a, #toggle, #regen").forEach(el => {
     el.style.color = vibrantHex;
+  });
+
+  document.querySelectorAll("p").forEach(el => {
+    el.style.color = punchHex;
   });
 
   document.querySelectorAll(".color-1","#color1m").forEach(el => {
@@ -355,14 +374,153 @@ function pastelizeHSL(hsl) {
 document.querySelectorAll(".panel", ).forEach(el => {
     el.style.borderLeftColor = punchHex;});
   // Apply tinted pastel to background
+  
   document.querySelectorAll("#mobc").forEach(el => {
     el.style.backgroundColor = tintedHex,
     el.style.borderBottomColor = punchHex;});
   document.body.style.backgroundColor = tintedHex;
+  document.querySelectorAll("#oj-logo path").forEach(path => {
+  path.style.fill = punchHex;
+});
 };
 
 
 $("#regen, #regen2").click(function(event){
     event.preventDefault();
     generatePalette();
+});
+
+$("#re-font, #font2").click(function(event){
+    event.preventDefault();
+    generateFont();
+});
+
+function generateFont(){
+    const fonts = getAllCSSFontFamilies();
+  const randomFont = fonts[Math.floor(Math.random() * fonts.length)];
+   document.querySelectorAll("h1, h3,#dice, #dice2, #colors, #font, #re-color2, #re-font2").forEach(el => {
+    el.style.fontFamily = randomFont;
+  });
+}
+
+function generateColor(){
+    const base = vibrantHSL();
+  const vibrantHex = hslToHex(base.h, base.s, base.l);
+
+  // 2. split complements (HSL)
+  const [sc1, sc2] = splitComplementary(base);
+
+  // 2. dramatic tint for background
+  const tinted = tintHSL(sc2, 0.85)
+  const tintedHex = hslToHex(tinted.h, tinted.s, tinted.l);
+
+  const punch = darkenHSL(sc1, 0.1)
+  const punchHex = hslToHex(punch.h, punch.s, punch.l);
+
+  const umph = tintHSL(sc2, 0.75)
+  const umphHex = hslToHex(umph.h, umph.s, umph.l);
+
+  const darkened = pastelizeHSL(sc1, sc2)
+  const darkHex = hslToHex(darkened.h,darkened.s, darkened.l);
+
+
+  const randomColor = randomHexColor()
+  const complement = complementaryColor(randomColor);
+
+const baseHSL = hexToHSL(randomColor);
+
+const tintedHSL = {
+  h: baseHSL.h,
+  s: Math.round(baseHSL.s * 0.85),
+  l: Math.min(95, baseHSL.l + 50)
+};
+
+const shadedHSL = {
+  h: baseHSL.h,
+  s: Math.min(100, baseHSL.s + 30),
+  l: Math.max(10, baseHSL.l - 15)
+};
+
+const shadedPHSL = {
+  h: baseHSL.h,
+  s: Math.round(baseHSL.s * 0.95),
+  l: Math.min(95, baseHSL.l + 30)
+};
+
+const tintColor = hslToHex(tintedHSL.h, tintedHSL.s, tintedHSL.l);
+const shadeColor = hslToHex(shadedHSL.h, shadedHSL.s, shadedHSL.l);
+const shadeP = hslToHex(shadedPHSL.h, shadedPHSL.s, shadedPHSL.l);
+
+
+const compHSL = hexToHSL(complement);
+
+const tintcompHSL = {
+  h: compHSL.h,
+  s: Math.round(compHSL.s * 0.85),
+  l: Math.min(95, compHSL.l + 40)
+};
+
+const shadecompHSL = {
+  h: compHSL.h,
+  s: Math.min(50, compHSL.s + 10),
+  l: Math.max(10, compHSL.l - 25)
+};
+
+const tintComp = hslToHex(tintcompHSL.h, tintcompHSL.s, tintcompHSL.l);
+const shadeComp = hslToHex(shadecompHSL.h, shadecompHSL.s, shadecompHSL.l);
+
+   document.querySelectorAll("h1").forEach(el => {
+    el.style.color =tintColor;
+  });
+
+  document.querySelectorAll("a, #toggle, #regen").forEach(el => {
+    el.style.color = tintColor;
+  });
+
+  document.querySelectorAll("p").forEach(el => {
+    el.style.color = tintComp;
+  });
+
+  document.querySelectorAll(".color-1","#color1m").forEach(el => {
+    el.style.backgroundColor = tintColor;
+    el.style.border = 0;
+  });
+  document.querySelectorAll(".color-2","#color2m").forEach(el => {
+    el.style.backgroundColor = randomColor;
+    el.style.border = 0;
+  });
+  document.querySelectorAll(".color-3","#color3m").forEach(el => {
+    el.style.backgroundColor = shadeColor;
+    el.style.border = 0;
+  });
+
+  document.querySelectorAll("#cb").forEach(el => {
+    el.style.color = tintColor;
+  });
+
+  document.querySelectorAll("#oj-logo path").forEach(path => {
+  path.style.fill = tintColor;
+});
+  
+ document.querySelectorAll("hr").forEach(el => {
+    el.style.borderTopColor = shadeColor;});
+document.querySelectorAll(".panel", ).forEach(el => {
+    el.style.borderLeftColor = shadeColor;});
+  // Apply tinted pastel to background
+  document.querySelectorAll("#mobc").forEach(el => {
+    el.style.backgroundColor = shadeComp;
+    el.style.borderBottomColor = shadeColor;});
+  document.body.style.backgroundColor = shadeComp;
+};
+
+  
+ $("#re-color, #recolor").click(function(event){
+    event.preventDefault();
+    generateColor();
+});
+
+window.addEventListener("load", function () {
+  document.querySelectorAll("#oj-logo path").forEach(el => {
+    path.style.fill = rgb(133, 51, 255);
+  });
 });
