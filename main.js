@@ -10,6 +10,28 @@ $(".projects").click(
     }
 )
 
+$(".brand").click(
+    function(event){
+        $(".brands").toggleClass("active")
+    }
+)
+$(".pub").click(
+    function(event){
+        $(".pubs").toggleClass("active")
+    }
+)
+
+$(".ad").click(
+    function(event){
+        $(".ads").toggleClass("active")
+    }
+)
+$(".misc").click(
+    function(event){
+        $(".miscs").toggleClass("active")
+    }
+)
+
 $("#cb").click(
     function(event){
         $(".palette").toggleClass("active")
@@ -22,14 +44,16 @@ $("#mcb").click(
     }
 )
 
-
+// this is the main block caller variable
 let entryItemOne = document.querySelector(".entry-one");
 let entryItemTwo = document.querySelector(".entry-two");
 let entryItemThree = document.querySelector(".entry-three");
+let entryItemFour = document.querySelector(".entry-four");
+let entryItemFive = document.querySelector(".entry-five");
 
 const getContent = function () {
   fetch(
-    "https://api.are.na/v2/channels/olenka-portfolio-1"
+    "https://api.are.na/v2/channels/misc-projects-2bllemurl84"
   )
     .then((response) => response.json())
     .then((data) => {
@@ -46,7 +70,7 @@ const getContent = function () {
           finalContents.push(contents[rand]);
           contentIds.push(contents[rand].id);
         }
-        if (finalContents.length === 3) break;
+        if (finalContents.length === 5) break;
       }
 
       const imgOne = document.createElement("img");
@@ -71,19 +95,251 @@ const getContent = function () {
       captionThree.innerHTML = finalContents[2].description_html;
       entryItemThree.appendChild(imgThree);
       entryItemThree.appendChild(captionThree);
+
+      const imgFour = document.createElement("img");
+      const captionFour = document.createElement("div");
+      imgFour.src = finalContents[3].image.display.url;
+      captionFour.innerHTML = finalContents[3].description_html;
+      entryItemFour.appendChild(imgFour);
+      entryItemFour.appendChild(captionFour);
+
+      const imgFive = document.createElement("img");
+      const captionFive = document.createElement("div");
+      imgFive.src = finalContents[4].image.display.url;
+      captionFive.innerHTML = finalContents[4].description_html;
+      entryItemFive.appendChild(imgFive);
+      entryItemFive.appendChild(captionFive);
     });
 };
 
 getContent();
 
+let entryBrandOne = document.querySelector(".brand-one")
+let entryBrandTwo = document.querySelector(".brand-two")
+let entryBrandThree = document.querySelector(".brand-three")
+let entryBrandFour = document.querySelector(".brand-four")
+let entryBrandFive = document.querySelector(".brand-five")
+
+const getBrand = function() {
+  fetch(
+    "https://api.are.na/v2/channels/branding-nmkswnuytog"
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      const contents = data.contents;
+
+      console.log(contents.length);
+
+      const finalContents = [];
+      const contentIds = [];
+      
+      while (finalContents.length < 5) {
+        const rand = Math.floor(Math.random() * contents.length);
+        if (!contentIds.includes(contents[rand].id)) {
+          finalContents.push(contents[rand]);
+          contentIds.push(contents[rand].id);
+        }}
+
+      const imgOne = document.createElement("img");
+      const captionOne = document.createElement("div");
+      imgOne.src = finalContents[0].image.display.url;
+      captionOne.innerHTML = finalContents[0].description_html;
+      entryBrandOne.appendChild(imgOne);
+      entryBrandOne.appendChild(captionOne);
+
+      const imgTwo = document.createElement("img");
+      const captionTwo = document.createElement("div");
+      imgTwo.src = finalContents[1].image.display.url;
+      captionTwo.innerHTML = finalContents[1].description_html;
+      entryBrandTwo.appendChild(imgTwo);
+      entryBrandTwo.appendChild(captionTwo);
+
+      const imgThree = document.createElement("img");
+      const captionThree = document.createElement("div");
+      imgThree.src = finalContents[2].image.display.url;
+      captionThree.innerHTML = finalContents[2].description_html;
+      entryBrandThree.appendChild(imgThree);
+      entryBrandThree.appendChild(captionThree);
+
+      const imgFour = document.createElement("img");
+      const captionFour = document.createElement("div");
+      imgFour.src = finalContents[3].image.display.url;
+      captionFour.innerHTML = finalContents[3].description_html;
+      entryBrandFour.appendChild(imgFour);
+      entryBrandFour.appendChild(captionFour);
+
+      const imgFive = document.createElement("img");
+      const captionFive = document.createElement("div");
+      imgFive.src = finalContents[4].image.display.url;
+      captionFive.innerHTML = finalContents[4].description_html;
+      entryBrandFive.appendChild(imgFive);
+      entryBrandFive.appendChild(captionFive);
+    });
+};
+getBrand();
+
+let entryPubOne = document.querySelector(".pub-one")
+let entryPubTwo = document.querySelector(".pub-two")
+let entryPubThree = document.querySelector(".pub-three")
+let entryPubFour = document.querySelector(".pub-four")
+let entryPubFive = document.querySelector(".pub-five")
+
+const getPub = function() {
+  fetch(
+    "https://api.are.na/v2/channels/publications-ulmzdeyk9io"
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      const contents = data.contents;
+
+      console.log(contents.length);
+
+      const finalContents = [];
+      const contentIds = [];
+      
+      while (finalContents.length < 5) {
+        const rand = Math.floor(Math.random() * contents.length);
+        if (!contentIds.includes(contents[rand].id)) {
+          finalContents.push(contents[rand]);
+          contentIds.push(contents[rand].id);
+        }}
+
+      const imgOne = document.createElement("img");
+      const captionOne = document.createElement("div");
+      imgOne.src = finalContents[0].image.display.url;
+      captionOne.innerHTML = finalContents[0].description_html;
+      entryPubOne.appendChild(imgOne);
+      entryPubOne.appendChild(captionOne);
+
+      const imgTwo = document.createElement("img");
+      const captionTwo = document.createElement("div");
+      imgTwo.src = finalContents[1].image.display.url;
+      captionTwo.innerHTML = finalContents[1].description_html;
+      entryPubTwo.appendChild(imgTwo);
+      entryPubTwo.appendChild(captionTwo);
+
+      const imgThree = document.createElement("img");
+      const captionThree = document.createElement("div");
+      imgThree.src = finalContents[2].image.display.url;
+      captionThree.innerHTML = finalContents[2].description_html;
+      entryPubThree.appendChild(imgThree);
+      entryPubThree.appendChild(captionThree);
+
+      const imgFour = document.createElement("img");
+      const captionFour = document.createElement("div");
+      imgFour.src = finalContents[3].image.display.url;
+      captionFour.innerHTML = finalContents[3].description_html;
+      entryPubFour.appendChild(imgFour);
+      entryPubFour.appendChild(captionFour);
+
+      const imgFive = document.createElement("img");
+      const captionFive = document.createElement("div");
+      imgFive.src = finalContents[4].image.display.url;
+      captionFive.innerHTML = finalContents[4].description_html;
+      entryPubFive.appendChild(imgFive);
+      entryPubFive.appendChild(captionFive);
+    });
+};
+getPub();
+
+
+
+let entryAdOne = document.querySelector(".ad-one")
+let entryAdTwo = document.querySelector(".ad-two")
+let entryAdThree = document.querySelector(".ad-three")
+
+const getAd = function() {
+  fetch(
+    "https://api.are.na/v2/channels/advertisement-mgqzgvykb70"
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      const contents = data.contents;
+
+      console.log(contents.length);
+
+      const finalContents = [];
+      const contentIds = [];
+      
+      while (finalContents.length < 3) {
+        const rand = Math.floor(Math.random() * contents.length);
+        if (!contentIds.includes(contents[rand].id)) {
+          finalContents.push(contents[rand]);
+          contentIds.push(contents[rand].id);
+        }}
+
+      const imgOne = document.createElement("img");
+      const captionOne = document.createElement("div");
+      imgOne.src = finalContents[0].image.display.url;
+      captionOne.innerHTML = finalContents[0].description_html;
+      entryAdOne.appendChild(imgOne);
+      entryAdOne.appendChild(captionOne);
+
+      const imgTwo = document.createElement("img");
+      const captionTwo = document.createElement("div");
+      imgTwo.src = finalContents[1].image.display.url;
+      captionTwo.innerHTML = finalContents[1].description_html;
+      entryAdTwo.appendChild(imgTwo);
+      entryAdTwo.appendChild(captionTwo);
+
+      const imgThree = document.createElement("img");
+      const captionThree = document.createElement("div");
+      imgThree.src = finalContents[2].image.display.url;
+      captionThree.innerHTML = finalContents[2].description_html;
+      entryAdThree.appendChild(imgThree);
+      entryAdThree.appendChild(captionThree);
+    });
+};
+getAd();
+
+const getMisc = function(){
+  fetch("")
+}
 
 $("#reload").click(function(event){
     event.preventDefault();
     entryItemOne.innerHTML = "";
     entryItemTwo.innerHTML = "";
     entryItemThree.innerHTML = "";
+    entryItemFour.innerHTML = "";
+    entryItemFive.innerHTML = "";
     getContent();
 });
+
+$("#reload-brand").click(function(event){
+    entryBrandOne.innerHTML = "";
+    entryBrandTwo.innerHTML = "";
+    entryBrandThree.innerHTML = "";
+    entryBrandFour.innerHTML = "";
+    entryBrandFive.innerHTML = "";
+    getBrand();
+});
+
+
+
+$("#reload-pub").click(function(event){
+    entryPubOne.innerHTML = "";
+    entryPubTwo.innerHTML = "";
+    entryPubThree.innerHTML = "";
+    entryPubFour.innerHTML = "";
+    entryPubFive.innerHTML = "";
+    getPub();
+});
+
+$("#reload-ad").click(function(event){
+    entryAdOne.innerHTML = "";
+    entryAdTwo.innerHTML = "";
+    entryAdThree.innerHTML = "";
+    getAd();
+});
+
+$("#reload-misc").click(function(event){
+    entryMiscOne.innerHTML = "";
+    entryMiscTwo.innerHTML = "";
+    entryMiscThree.innerHTML = "";
+    getAd();
+});
+
 
 function getAllCSSFontFamilies() {
   const fontFamilies = new Set();

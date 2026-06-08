@@ -278,7 +278,7 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
     #mod{
         margin-left: 0;
     }
-    #one, #two, #three{
+    #one, #two, #three, #four, #five, #b-one, #b-two, #b-three, #b-four, #b-five, #p-one, #p-two, #p-three, #p-four, #p-five, #a-one, #a-two, #a-three{
         width: 100%;
     }
     #cont{
@@ -294,7 +294,7 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
         position: relative;
         margin-left: 0;
     }
-    #ent{
+    #ent, #brands, #pubs, #ads, #miscs{
         align-items: start;
     }
     #logo{
@@ -447,26 +447,26 @@ hr {
     color: rgb(46 49 146);
 }
 
-.work{
+.work, .brands, .pubs, .ads, .miscs{
     display:none;
     visibility: hidden;
     width: 100%;
     height: auto;
 }
 
-.work.active{
+.work.active, .brands.active, .pubs.active, .ads.active, .miscs.active{
     display: block;
     flex-direction: column;
     visibility:visible;
 }
 
-.entries{
+.entries, .brand-entries, .pub-entries, .ad-entries{
     display: flex;
     flex-direction: column;
     align-items: start;
     height: auto;
 }
-.entry-one, .entry-two, .entry-three{
+.entry-one, .entry-two, .entry-three, .entry-four, .entry-five, .brand-one, .brand-two,.brand-three, .brand-four, .brand-five, .pub-one, .pub-two, .pub-three, .pub-four, .pub-five, .ad-one, .ad-two, .ad-three, .ad-four {
     display: flex;
     gap: 10%;
     height:auto;
@@ -509,7 +509,23 @@ div.cards, .annex {
     gap:5%;
     padding-bottom: 1%;
 }
+.handcoded{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap:5%;
+    margin-top:2.5%;
+    padding-bottom: 1%;
+}
 
+
+.links{
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    gap:5%;
+}
 .palette{
     visibility: hidden;
     display: flex;
